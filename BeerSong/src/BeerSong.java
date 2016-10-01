@@ -31,6 +31,14 @@
  *        That is, 
  *            Ninety_Nine_Bottles_of_Beer() method is ready to be invoked. 
  * 
+ * 
+ * Change #2, MadeOn:2016-Sep-30@2202, MadeBy:trrothe@oakland.edu
+ * VERSION: 1.0.2.0
+ * DESCRIPTION:
+ *     1) Implements functionality into main()  method.
+ *        That is, 
+ *            main() method is invokes Ninety_Nine_Bottles_of_Beer() method. 
+ * 
  *******************************************************************************
  */
 package BeerSong;
@@ -114,6 +122,10 @@ public class BeerSong
     */
     public static void main(String[] args) 
         {
+        
+        // count down the bottles of beer on the wall...
+        Ninety_Nine_Bottles_of_Beer();
+
         }
         /*
         ************************************************************************
