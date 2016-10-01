@@ -23,6 +23,14 @@
  *            public class BeerSong is empty
  *            public static void main(String[] args) is empty
  * 
+ * 
+ * Change #1, MadeOn:2016-Sep-30@2139, MadeBy:trrothe@oakland.edu
+ * VERSION: 1.0.1.0
+ * DESCRIPTION:
+ *     1) Implements functionality into Ninety_Nine_Bottles_of_Beer() method.
+ *        That is, 
+ *            Ninety_Nine_Bottles_of_Beer() method is ready to be invoked. 
+ * 
  *******************************************************************************
  */
 package BeerSong;
@@ -47,6 +55,49 @@ public class BeerSong
     */
     public static void Ninety_Nine_Bottles_of_Beer() 
         {
+        // starting from 99 to 0
+        // each time this method is called, 
+        //     the number of bottles is decremented by 1
+        // at 0 bottles, the message is "no more bottles..." 
+        // -- and not "0 bottles"
+            
+
+        // holds the string message to be emitted to the user...
+        String strEmitMessage; 
+        
+        
+        // 
+        // compose and emit a message...
+        // 
+        for (int intBottleLeft=99; intBottleLeft>0; intBottleLeft--)
+            {
+            // holds the integer count of bottles left, minus 1...
+            String strBottlesLeftMinus1;
+
+            
+            // 
+            // sensitize the message to say "no more" instead of 0(zero)...
+            // 
+            strBottlesLeftMinus1 = ( ((intBottleLeft-1) == 0) ? "no more" : ""+(intBottleLeft-1) );
+
+            
+            // 
+            // compose the message...
+            // 
+            strEmitMessage = 
+                      (intBottleLeft) + " bottles of beer on the wall, "
+                    + (intBottleLeft) + " bottles of beer\n" 
+                    + "take one down, pass it around, "
+                    + strBottlesLeftMinus1 + " bottles of beer on the wall."
+                    ;
+            
+            // 
+            // emit the message...
+            // 
+            System.out.println(strEmitMessage);
+            
+            }
+        
         }
         /*
         ************************************************************************
@@ -76,4 +127,3 @@ public class BeerSong
     * public class BeerSong
     ****************************************************************************
     */
-
